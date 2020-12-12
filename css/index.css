@@ -1,0 +1,136 @@
+html, body, #container {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebarHeader {
+    max-height: 4rem;
+    height: 4rem;
+}
+
+#sidebarChatList {
+    max-height: calc(100vh - 4rem - 10px);
+}
+
+#chatContentHeader {
+    max-height: 4rem;
+    height: 4rem;
+}
+
+#chatContentBody {
+    max-height: calc(100vh - 8rem);
+}
+
+#chatContentFooter {
+    max-height: 4rem;
+    height: 4rem;
+}
+
+.bubbleLeft {
+    color: black;
+    position: relative;
+    background: lightgray;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 4rem 1rem 1.5rem;
+}
+
+/* bubble effect originally from https://leaverou.github.io/bubbly/ */
+.bubbleLeft::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 2.5rem solid transparent;
+    border-right-color: lightgray;
+    border-top: 0;
+    border-left: 0;
+    margin-left: -1.5rem;
+    margin-top: 0;
+}
+
+.bubbleRight {
+    color: white;
+    position: relative;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 1.5rem 1rem 4rem;
+}
+
+.bubbleRight::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 2.5rem solid transparent;
+    border-top: 0;
+    border-right: 0;
+    margin-right: -1.5rem;
+    margin-top: 0;
+}
+
+.bubbleGreen {
+    background: limegreen;
+}
+
+.bubbleGreen::after {
+    border-left-color: limegreen;
+}
+
+.bubbleBlue {
+    background: dodgerblue;
+}
+
+.bubbleBlue::after {
+    border-left-color: dodgerblue;
+}
+
+.bubbleRight > a {
+    color: white;
+    text-decoration: underline;
+}
+
+.bubbleLeft > a {
+    color: black;
+    text-decoration: underline;
+}
+
+.sendButtonBlue {
+    background: dodgerblue;
+}
+
+.sendButtonGreen {
+    background: limegreen;
+}
+
+.centerMetadata {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.rightMetadata {
+    font-size: 0.8rem;
+    text-align: right;
+    margin-right: 2rem;
+}
+
+.leftMetadata {
+    font-size: 0.8rem;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.leftTypingIndicator {
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.rightTypingIndicator {
+    text-align: right;
+    margin-right: 2rem;
+}
